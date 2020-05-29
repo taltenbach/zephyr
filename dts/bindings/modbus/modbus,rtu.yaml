@@ -1,0 +1,8 @@
+# Copyright (c) 2020 PHYTEC Messtechnik GmbH
+# SPDX-License-Identifier: Apache-2.0
+
+description: Modbus RTU (over serial line) device
+
+compatible: "modbus,rtu"
+
+include: uart-device.yaml
