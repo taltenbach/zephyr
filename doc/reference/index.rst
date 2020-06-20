@@ -22,6 +22,7 @@ API Reference
    logging/index.rst
    misc/index
    misc/data_structures.rst
+   modbus/index.rst
    networking/index.rst
    peripherals/index.rst
    power_management/index.rst
