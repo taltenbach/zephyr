@@ -9,7 +9,7 @@
 
 	modbus0 {
 		compatible = "modbus,rtu";
-		label = "MODBUS";
+		label = "MODBUS0";
 		status = "okay";
 	};
 };
