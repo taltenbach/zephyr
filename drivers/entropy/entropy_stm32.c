@@ -321,13 +321,13 @@ static int entropy_stm32_rng_get_entropy(const struct device *dev,
 		bytes = rng_pool_get(
 				(struct rng_pool *)(entropy_stm32_rng_data.thr),
 				buf, len);
-		k_sem_give(&entropy_stm32_rng_data.sem_lock);
 
 		if (bytes == 0U) {
 			/* Pool is empty: Sleep until next interrupt. */
 			k_sem_take(&entropy_stm32_rng_data.sem_sync, K_FOREVER);
-			continue;
 		}
+
+		k_sem_give(&entropy_stm32_rng_data.sem_lock);
 
 		len -= bytes;
 		buf += bytes;
